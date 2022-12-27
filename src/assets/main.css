@@ -1,0 +1,45 @@
+@import '/src/assets/main.scss';
+#app {
+  column-gap: 2rem;
+  display:flex;
+  flex-direction: column;
+  font-weight: normal;
+  height: 100vh;
+  margin: 0 auto;
+  row-gap: 1rem;
+  width: 80vw;
+}
+
+main {
+  display: flex;
+  padding-top: 5rem;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: 0.4s;
+}
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  color: var(--color-heading);
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    padding: 12rem 0 2rem;
+  }
+}
