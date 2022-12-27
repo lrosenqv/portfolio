@@ -1,4 +1,4 @@
-@import '/src/assets/main.scss';
+@import '/src/assets/base.css';
 #app {
   column-gap: 2rem;
   display:flex;
