@@ -17,11 +17,11 @@
   </ProjectItem>
 </template>
 <script setup lang="ts">
-import blancDesktop from "@/assets/blanc/desktop.jpg";
-import blancTablet from "@/assets/blanc/tablet.jpg";
-import blancMobile from "@/assets/blanc/mobile.jpg";
-import ProjectImage from "./ProjectImage.vue";
-import ProjectItem from "./ProjectItem.vue";
+import blancDesktop from '@/assets/blanc/desktop.jpg'
+import blancTablet from '@/assets/blanc/tablet.jpg'
+import blancMobile from '@/assets/blanc/mobile.jpg'
+import ProjectImage from './ProjectImage.vue'
+import ProjectItem from './ProjectItem.vue'
 </script>
 
 <style lang="scss" scoped>

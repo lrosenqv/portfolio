@@ -16,7 +16,7 @@
   }
   &::before {
     background-color: var(--color-decoration-primary);
-    content: "";
+    content: '';
     display: block;
     width: 100%;
     height: 60%;
@@ -24,7 +24,7 @@
     right: -3rem;
   }
   &::after {
-    content: "";
+    content: '';
     background-color: var(--color-decoration-secondary);
     display: block;
     width: 100%;

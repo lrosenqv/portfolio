@@ -4,17 +4,17 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { toRefs } from "vue";
+import { toRefs } from 'vue'
 const props = defineProps({
   imgSrc: {
     type: String,
-    default: "",
-  },
-});
-const { imgSrc } = toRefs(props);
+    default: ''
+  }
+})
+const { imgSrc } = toRefs(props)
 function onMouseOut(e: MouseEvent) {
-  const el = e.target as HTMLDivElement;
-  el.scrollTo(0, 0);
+  const el = e.target as HTMLDivElement
+  el.scrollTo(0, 0)
 }
 </script>
 <style lang="scss" scoped>

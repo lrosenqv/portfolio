@@ -5,11 +5,7 @@
     <slot name="content"></slot>
     <div class="project-item__tags">
       <ul class="project-item__tags-container">
-        <li
-          v-for="(tag, index) in tags"
-          :key="index"
-          class="project-item__tags-obj"
-        >
+        <li v-for="(tag, index) in tags" :key="index" class="project-item__tags-obj">
           {{ tag }}
         </li>
       </ul>
@@ -18,24 +14,24 @@
 </template>
 
 <script lang="ts" setup>
-import { toRefs } from "vue";
+import { toRefs } from 'vue'
 
 const props = defineProps({
   title: {
     type: String,
-    default: "",
+    default: ''
   },
   description: {
     type: String,
-    default: "",
+    default: ''
   },
   tags: {
     type: Array<String>,
-    default: () => [],
-  },
-});
+    default: () => []
+  }
+})
 
-const { title, description } = toRefs(props);
+const { title, description } = toRefs(props)
 </script>
 <style lang="scss" scoped>
 .project-item {
@@ -48,7 +44,7 @@ const { title, description } = toRefs(props);
   &__tags {
     column-gap: 8px;
     display: flex;
-    font-family: "Playfair Display", serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     font-weight: 300;
     &-obj {
@@ -64,7 +60,7 @@ const { title, description } = toRefs(props);
 
       li:not(:last-of-type) {
         &::after {
-          content: "";
+          content: '';
           display: inline-block;
           height: 70%;
           width: 1.5px;

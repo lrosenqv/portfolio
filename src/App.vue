@@ -18,18 +18,14 @@
   </main>
   <footer>
     <a href="mailto:louise.rosenqvist@medieinstitutet.se">Email</a>
-    <a
-      href="https://www.linkedin.com/in/louise-rosenqvist-722922124/"
-      target="_blank"
-      >Linkedin</a
-    >
+    <a href="https://www.linkedin.com/in/louise-rosenqvist-722922124/" target="_blank">Linkedin</a>
     <a href="https://github.com/lrosenqv" target="_blank">Github</a>
   </footer>
 </template>
 
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-import SiteIntro from "./components/SiteIntro.vue";
+import { RouterLink, RouterView } from 'vue-router'
+import SiteIntro from './components/SiteIntro.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -58,7 +54,7 @@ nav a.router-link-exact-active {
 nav a {
   color: var(--color-heading);
   display: inline-block;
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   padding: 0 0.8rem;
 }
@@ -70,7 +66,7 @@ nav a {
   z-index: 2;
   &::before,
   &::after {
-    content: "";
+    content: '';
     width: 2px;
     height: 0;
     position: absolute;
@@ -93,7 +89,7 @@ nav a {
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     width: 0;
     height: 2px;
     position: absolute;
@@ -131,7 +127,7 @@ footer {
   }
 
   a::after {
-    content: "";
+    content: '';
     display: block;
     position: relative;
     transition: all 0.2s linear;

@@ -7,8 +7,8 @@
 
 <script setup lang="ts">
 defineProps<{
-  msg: string;
-}>();
+  msg: string
+}>()
 </script>
 
 <style scoped lang="scss">
