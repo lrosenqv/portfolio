@@ -1,18 +1,25 @@
 @import '/src/assets/base.css';
 #app {
   column-gap: 2rem;
-  display:flex;
-  flex-direction: column;
+  display: grid;
   font-weight: normal;
+  grid-template-columns: minmax(80vw, auto);
+  grid-template-rows: minmax(25vh, auto) 1fr auto;
   height: 100vh;
-  margin: 0 auto;
-  row-gap: 1rem;
-  width: 80vw;
+  justify-content: center;
+  padding: 40px 40px 20px;
+  row-gap: 40px;
 }
-
+body {
+  font-size: 100%;
+}
+html {
+  width: 100vw;
+  height: 100vh;
+}
 main {
   display: flex;
-  padding-top: 5rem;
+  height: 100%;
 }
 ul {
   list-style-type: none;
@@ -26,7 +33,7 @@ a {
 h1,
 h2,
 h3 {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   color: var(--color-heading);
 }
 
@@ -37,9 +44,40 @@ h3 {
   }
 
   #app {
+    /* align-items: center; */
+    /* column-gap: 2.5rem; */
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 1rem;
-    padding: 12rem 0 2rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    /* grid-template-rows: 88% 10%; */
+    /* justify-content: center; */
+    /* margin-top: auto; */
+    /* padding: 100px 10vw 20px; */
+    padding: 0;
+    gap: 0;
+    /* row-gap: 1rem; */
+    width: 80vw;
+  }
+  header {
+    grid-column: 1 / 5;
+    grid-row: 3/ 8;
+  }
+  main {
+    grid-column: 6 / 13;
+    grid-row: 1/ -1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: inherit;
+  }
+  main > div {
+    grid-column: 1 / -1;
+    grid-row: 4 / 13;
+    /* overflow: auto;
+    padding-right: 24px;
+    margin-bottom: 24px; */
+  }
+  footer {
+    grid-column: 1 / 4;
+    grid-row: 11;
   }
 }

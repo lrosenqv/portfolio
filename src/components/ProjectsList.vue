@@ -26,35 +26,55 @@ import ProjectItem from './ProjectItem.vue'
 
 <style lang="scss" scoped>
 .content-wrapper {
+  column-gap: 12px;
   display: grid;
-  grid-template-columns: 50% auto auto;
+  grid-template-columns: 50% 30% auto;
   height: 20rem;
   position: relative;
-  width: 100%;
   :nth-child(1) {
-    justify-self: start;
+    grid-column: 1;
+    place-self: end left;
+    transform-origin: bottom left;
   }
   :nth-child(2) {
-    justify-self: center;
+    grid-column: 2;
+    transition: all 0.5s;
+    place-self: end center;
+    &:hover {
+      width: 80%;
+      transform-origin: bottom center;
+    }
   }
   :nth-child(3) {
-    justify-self: end;
+    grid-column: 3;
+    place-self: end right;
+    &:hover {
+      width: 60%;
+      transform-origin: right;
+    }
+  }
+  @keyframes createBox {
+    from {
+      height: 100%;
+      margin-right: -5px;
+      position: relative;
+    }
+    to {
+      grid-row: 1 /-1;
+      height: 200%;
+    }
   }
 
   div {
     grid-row: 1;
-    overflow: auto;
-    scrollbar-width: thin;
+    overflow: hidden;
     transition: all 0.5s;
-    width: 95%;
-    &::-webkit-scrollbar {
-      width: 0;
-    }
+
     &:hover {
-      height: 120%;
+      animation: createBox 0.5s;
+      animation-fill-mode: forwards;
+      grid-column: 1 / -1;
       overflow: auto;
-      position: absolute;
-      width: 100%;
     }
   }
 }

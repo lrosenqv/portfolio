@@ -37,7 +37,7 @@ const { title, description } = toRefs(props)
 .project-item {
   display: flex;
   flex-direction: column;
-  row-gap: 12px;
+  row-gap: 16px;
   p {
     padding-bottom: 8px;
   }

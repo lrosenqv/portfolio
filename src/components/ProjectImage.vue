@@ -25,7 +25,7 @@ function onMouseOut(e: MouseEvent) {
   display: flex;
   flex-direction: column;
   height: 100%;
-  overflow: auto;
+  // overflow: clip;
   position: relative;
   width: 100%;
 
@@ -34,20 +34,17 @@ function onMouseOut(e: MouseEvent) {
     border: 6px solid var(--color-decoration-primary);
     position: absolute;
     z-index: 2;
-
-    img {
-      height: max-content;
-      position: absolute;
-      width: 100%;
-    }
   }
 
   img {
     width: 100%;
+    // overflow: hidden;
+    // overflow: scroll;
+    // overflow: visible;
 
     &:hover {
       cursor: pointer;
-      overflow: auto;
+      // overflow: scroll;
     }
   }
 }

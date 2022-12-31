@@ -13,25 +13,27 @@
       intersection between design and front end.
     </p>
     <p>
-      In my spare time my interests revolves around art, music, hiking & training my dog (and yes,
-      she's adorable).
+      In my spare time my interests revolves around art, music, hiking & training my dog (yes, she's
+      adorable).
     </p>
   </div>
 </template>
 
 <style lang="scss">
+.about {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
 @media (min-width: 1024px) {
   .about {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    row-gap: 2rem;
     h2 {
       font-size: 2rem;
       font-weight: 600;
     }
     p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       text-align: center;
     }
   }
